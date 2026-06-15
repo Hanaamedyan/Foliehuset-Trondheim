@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Foliehuset Trondheim — Spesialister på foliering</title>
+<meta name="description" content="Foliehuset Trondheim (tidl. Auto-Shine Trondheim) — helfoliering, bildekor, chromedelete, solfilm og PPF. Sertifisert av 3M og Avery Dennison."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230A0A0A'/%3E%3Ctext x='16' y='20' text-anchor='middle' font-family='Arial' font-size='13' font-weight='300' fill='%23F0EEE6' letter-spacing='1'%3EFH%3C/text%3E%3C/svg%3E"/>
+<meta name="theme-color" content="#0A0A0A"/>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.0.42/dist/lenis.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js" defer></script>
+<script src="script.js" defer></script>
+</head>
+<body>
+<div class="cur" id="cur"></div>
+<div class="cur-r" id="cur-r"></div>
+
+<nav id="nav">
+  <a href="index.html" class="nav-brand" aria-label="Foliehuset Trondheim"></a>
+  <ul class="nav-links">
+    <li><a href="tjenester.html" data-no="Tjenester" data-en="Services">Tjenester</a></li>
+    <li><a href="priser.html" data-no="Priser" data-en="Pricing">Priser</a></li>
+    <li><a href="om-oss.html" data-no="Om oss" data-en="About">Om oss</a></li>
+    <li><a href="kontakt.html" data-no="Kontakt" data-en="Contact">Kontakt</a></li>
+  </ul>
+  <a href="tel:+4794874836" class="nav-cta">948 74 836
+    <span class="nav-cta-i"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></span>
+  </a>
+  <button class="burger" id="burger"><span></span><span></span><span></span></button>
+</nav>
+<div class="mob" id="mob">
+  <a href="index.html" data-no="Hjem" data-en="Home">Hjem</a>
+  <a href="tjenester.html" data-no="Tjenester" data-en="Services">Tjenester</a>
+  <a href="priser.html" data-no="Priser" data-en="Pricing">Priser</a>
+  <a href="om-oss.html" data-no="Om oss" data-en="About">Om oss</a>
+  <a href="kontakt.html" data-no="Kontakt" data-en="Contact">Kontakt</a>
+  <a href="tel:+4794874836" style="color:var(--acc-3);">948 74 836</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-img"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="hero-tag rev"><div class="hero-tag-dot"></div><span data-no="Trondheim · Tidl. Auto-Shine Trondheim" data-en="Trondheim · Formerly Auto-Shine Trondheim">Trondheim · Tidl. Auto-Shine Trondheim</span></div>
+    <h1 class="hero-h rev d1" data-no="Foliering<br/><span class=&quot;serif&quot;>i særklasse.</span>" data-en="Vinyl wrapping<br/><span class=&quot;serif&quot;>in a class of its own.</span>">Foliering<br/><span class="serif">i særklasse.</span></h1>
+    <div class="hero-rule rev d2"><div class="hero-rule-line"></div><span class="hero-rule-mono" data-no="Sertifisert 3M · Avery Dennison" data-en="Certified 3M · Avery Dennison">Sertifisert 3M · Avery Dennison</span></div>
+    <p class="hero-sub rev d3" data-no="Foliehuset Trondheim er ditt spesialiserte folieringsfirma. Hamid har drevet med foliering siden 2011 — over 1000 biler har vært gjennom verkstedet. Kvalitetsbevisst arbeid til konkurransedyktige priser." data-en="Foliehuset Trondheim is your specialised vinyl wrapping shop. Hamid has been wrapping vehicles since 2011 — over 1,000 cars have passed through the workshop. Quality-conscious work at competitive prices.">Foliehuset Trondheim er ditt spesialiserte folieringsfirma. Hamid har drevet med foliering siden 2011 — over 1000 biler har vært gjennom verkstedet. Kvalitetsbevisst arbeid til konkurransedyktige priser.</p>
+    <div class="hero-acts rev d4">
+      <a href="kontakt.html" class="btn-glass">
+        <span data-no="Få et tilbud" data-en="Get a quote">Få et tilbud</span>
+        <span class="btn-glass-i"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></span>
+      </a>
+      <a href="tjenester.html" class="btn-ghost" data-no="Se tjenester ↗" data-en="See services ↗">Se tjenester ↗</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><div class="hero-scroll-bar"></div><span>Scroll</span></div>
+</section>
+
+<!-- MARQUEE -->
+<div class="mq">
+  <div class="mq-track">
+    <div class="mq-it" data-no="Helfoliering" data-en="Full wrap">Helfoliering</div>
+    <div class="mq-it" data-no="Bildekor" data-en="Vehicle decor">Bildekor</div>
+    <div class="mq-it" data-no="Skiltdekor" data-en="Sign decor">Skiltdekor</div>
+    <div class="mq-it" data-no="Vindusdekor" data-en="Window decor">Vindusdekor</div>
+    <div class="mq-it" data-no="Chromedelete" data-en="Chrome delete">Chromedelete</div>
+    <div class="mq-it" data-no="Solfilm" data-en="Window tint">Solfilm</div>
+    <div class="mq-it">PPF</div>
+    <div class="mq-it" data-no="3M Sertifisert" data-en="3M Certified">3M Sertifisert</div>
+    <div class="mq-it">Avery Dennison</div>
+    <div class="mq-it" data-no="Helfoliering" data-en="Full wrap">Helfoliering</div>
+    <div class="mq-it" data-no="Bildekor" data-en="Vehicle decor">Bildekor</div>
+    <div class="mq-it" data-no="Skiltdekor" data-en="Sign decor">Skiltdekor</div>
+    <div class="mq-it" data-no="Vindusdekor" data-en="Window decor">Vindusdekor</div>
+    <div class="mq-it" data-no="Chromedelete" data-en="Chrome delete">Chromedelete</div>
+    <div class="mq-it" data-no="Solfilm" data-en="Window tint">Solfilm</div>
+    <div class="mq-it">PPF</div>
+    <div class="mq-it" data-no="3M Sertifisert" data-en="3M Certified">3M Sertifisert</div>
+    <div class="mq-it">Avery Dennison</div>
+  </div>
+</div>
+
+<!-- GALLERI -->
+<section class="sek" id="galleri">
+  <div class="sek-inner">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;">
+      <div>
+        <div class="s-eye rev" data-no="Vårt arbeid" data-en="Our work">Vårt arbeid</div>
+        <h2 class="s-h rev d1" data-no="Sett deg inn<br/>i <span class=&quot;serif&quot;>finishen.</span>" data-en="See the<br/><span class=&quot;serif&quot;>finish.</span>">Sett deg inn<br/>i <span class="serif">finishen.</span></h2>
+      </div>
+      <p class="s-sub rev d2" data-no="Et utvalg fra over 1000 prosjekter siden 2016 — foliering, polering og lakkbeskyttelse." data-en="A selection from over 1,000 projects since 2016 — wrapping, polishing and paint protection.">Et utvalg fra over 1000 prosjekter siden 2016 — foliering, polering og lakkbeskyttelse.</p>
+    </div>
+    <div class="gal">
+      <a class="gal-it gal-1 rev" href="priser.html" aria-label="Se priser"><img src="gal-14.jpg" alt="Foliering" loading="lazy"/><div class="gal-lbl" data-no="Helfoliering" data-en="Full wrap">Helfoliering</div></a>
+      <a class="gal-it gal-2 rev d1" href="priser.html" aria-label="Se priser"><img src="gal-10.jpg" alt="Detalj" loading="lazy"/><div class="gal-lbl" data-no="Detalj" data-en="Detail">Detalj</div></a>
+      <a class="gal-it gal-3 rev d1" href="priser.html" aria-label="Se priser"><img src="gal-11.jpg" alt="Polering" loading="lazy"/><div class="gal-lbl" data-no="Polering" data-en="Polishing">Polering</div></a>
+      <a class="gal-it gal-4 rev d2" href="priser.html" aria-label="Se priser"><img src="gal-12.jpg" alt="Foliering" loading="lazy"/><div class="gal-lbl">PPF</div></a>
+      <a class="gal-it gal-5 rev d2" href="priser.html" aria-label="Se priser"><img src="gal-13.jpg" alt="Foliering" loading="lazy"/><div class="gal-lbl" data-no="Lakkforsegling" data-en="Paint sealing">Lakkforsegling</div></a>
+      <a class="gal-it gal-6 rev d3" href="priser.html" aria-label="Se priser"><img src="gal-1.jpg" alt="Bildekor" loading="lazy"/><div class="gal-lbl" data-no="Bildekor" data-en="Vehicle decor">Bildekor</div></a>
+      <a class="gal-it gal-7 rev d3" href="priser.html" aria-label="Se priser"><img src="gal-2.jpg" alt="Verksted" loading="lazy"/><div class="gal-lbl" data-no="Verksted" data-en="Workshop">Verksted</div></a>
+      <a class="gal-it gal-8 rev d4" href="priser.html" aria-label="Se priser"><img src="gal-9.jpg" alt="Foliering" loading="lazy"/><div class="gal-lbl" data-no="Foliering" data-en="Wrapping">Foliering</div></a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS CAROUSEL -->
+<section class="sek" id="kunder">
+  <div class="sek-inner">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;">
+      <div>
+        <div class="s-eye rev" data-no="Stemmer" data-en="Voices">Stemmer</div>
+        <h2 class="s-h rev d1" data-no="Hva kunder<br/><span class=&quot;serif&quot;>sier.</span>" data-en="What clients<br/><span class=&quot;serif&quot;>say.</span>">Hva kunder<br/><span class="serif">sier.</span></h2>
+      </div>
+      <p class="s-sub rev d2" data-no="Bla gjennom historier fra bileiere vi har jobbet med." data-en="Swipe through stories from car owners we've worked with.">Bla gjennom historier fra bileiere vi har jobbet med.</p>
+    </div>
+    <div class="car-wrap rev d1">
+      <div class="car" id="car">
+        <div class="car-card">
+          <div><div class="car-quote" data-no="Godt utført arbeid til en god pris. Anbefales! Fikk utvendig bilvask på sparket — rent og skinnende over alt, ingen rester etterlatt på lakk eller interiør." data-en="Well done at a good price. Highly recommended! Got an exterior wash on short notice — clean and shining everywhere, no residue on paint or interior.">Godt utført arbeid til en god pris. Anbefales! Fikk utvendig bilvask på sparket — rent og skinnende over alt, ingen rester etterlatt på lakk eller interiør.</div></div>
+          <div class="car-foot">
+            <div class="car-ava">SK</div>
+            <div class="car-info"><div class="car-name">Sindre Kvåle</div><div class="car-role" data-no="Bilpleie · Anmeldelse" data-en="Car care · Review">Bilpleie · Anmeldelse</div></div>
+          </div>
+        </div>
+        <div class="car-card">
+          <div><div class="car-quote" data-no="Helfolierte Porschen min hos Foliehuset. Resultatet er bedre enn lakk fra fabrikk — sømløse kanter og perfekt finish." data-en="Got my Porsche fully wrapped at Foliehuset. The result is better than factory paint — seamless edges and perfect finish.">Helfolierte Porschen min hos Foliehuset. Resultatet er bedre enn lakk fra fabrikk — sømløse kanter og perfekt finish.</div></div>
+          <div class="car-foot">
+            <div class="car-ava">ES</div>
+            <div class="car-info"><div class="car-name">Erik Sundnes</div><div class="car-role" data-no="Porsche 911 · Helfoliering" data-en="Porsche 911 · Full wrap">Porsche 911 · Helfoliering</div></div>
+          </div>
+        </div>
+        <div class="car-card">
+          <div><div class="car-quote" data-no="Bildekor på varebilflåten vår — tre biler ferdig på under en uke. Veldig god dialog underveis." data-en="Decor on our van fleet — three vehicles finished in under a week. Excellent communication throughout.">Bildekor på varebilflåten vår — tre biler ferdig på under en uke. Veldig god dialog underveis.</div></div>
+          <div class="car-foot">
+            <div class="car-ava">MH</div>
+            <div class="car-info"><div class="car-name">Mads Hansen</div><div class="car-role" data-no="Daglig leder · Nordbygg Trøndelag" data-en="CEO · Nordbygg Trøndelag">Daglig leder · Nordbygg Trøndelag</div></div>
+          </div>
+        </div>
+        <div class="car-card">
+          <div><div class="car-quote" data-no="PPF på fronten av nye Tesla. Hamid forklarte hvert valg, og priste det godt under det andre tilbød." data-en="PPF on the front of a new Tesla. Hamid explained every choice and priced it well under what others offered.">PPF på fronten av nye Tesla. Hamid forklarte hvert valg, og priste det godt under det andre tilbød.</div></div>
+          <div class="car-foot">
+            <div class="car-ava">SB</div>
+            <div class="car-info"><div class="car-name">Sigrid Bakke</div><div class="car-role" data-no="Tesla Model 3 · PPF front" data-en="Tesla Model 3 · PPF front">Tesla Model 3 · PPF front</div></div>
+          </div>
+        </div>
+        <div class="car-card">
+          <div><div class="car-quote" data-no="Chromedelete på BMW M3-en — den ser helt komplett ut nå. Profesjonelt utført, ingen synlige overganger." data-en="Chrome delete on my BMW M3 — it looks completely whole now. Professionally done, no visible transitions.">Chromedelete på BMW M3-en — den ser helt komplett ut nå. Profesjonelt utført, ingen synlige overganger.</div></div>
+          <div class="car-foot">
+            <div class="car-ava">TJ</div>
+            <div class="car-info"><div class="car-name">Tor Jenssen</div><div class="car-role" data-no="BMW M3 · Chromedelete" data-en="BMW M3 · Chrome delete">BMW M3 · Chromedelete</div></div>
+          </div>
+        </div>
+        <div class="car-card">
+          <div><div class="car-quote" data-no="Solfilm på alle ruter etter samme dag jeg bestilte. Bilen er kjøligere og mye mer privat. Kjempegjort." data-en="Window tint on all windows the same day I booked. The car is cooler and much more private. Great work.">Solfilm på alle ruter etter samme dag jeg bestilte. Bilen er kjøligere og mye mer privat. Kjempegjort.</div></div>
+          <div class="car-foot">
+            <div class="car-ava">AK</div>
+            <div class="car-info"><div class="car-name">Anette Kvam</div><div class="car-role" data-no="Audi Q5 · Solfilm" data-en="Audi Q5 · Window tint">Audi Q5 · Solfilm</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="car-ctrls">
+        <div class="car-dots" id="car-dots"></div>
+        <div class="car-arrows">
+          <button class="car-arrow" id="car-prev" data-no-attr="aria-label:Forrige" data-en-attr="aria-label:Previous" aria-label="Forrige"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg></button>
+          <button class="car-arrow" id="car-next" data-no-attr="aria-label:Neste" data-en-attr="aria-label:Next" aria-label="Neste"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta">
+  <div class="cta-orb cta-o1"></div>
+  <div class="cta-orb cta-o2"></div>
+  <h2 class="cta-h rev" data-no="Klar for å<br/><span class=&quot;accent&quot;>forvandle</span> bilen?" data-en="Ready to<br/><span class=&quot;accent&quot;>transform</span> your car?">Klar for å<br/><span class="accent">forvandle</span> bilen?</h2>
+  <p class="cta-sub rev d1" data-no="Ring oss eller send en e-post — vi gir deg et raskt og ærlig tilbud. Din bil fortjener det beste." data-en="Call us or send an email — we'll give you a fast and honest quote. Your car deserves the best.">Ring oss eller send en e-post — vi gir deg et raskt og ærlig tilbud. Din bil fortjener det beste.</p>
+  <div class="cta-acts rev d2">
+    <a href="tel:+4794874836" class="btn-glass">
+      <span data-no="Ring 948 74 836" data-en="Call 948 74 836">Ring 948 74 836</span>
+      <span class="btn-glass-i"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></span>
+    </a>
+    <a href="mailto:post@autoshinebilpleie.no" class="btn-ghost">post@autoshinebilpleie.no ↗</a>
+  </div>
+</div>
+
+<footer>
+  <div class="ft">
+    <h2 class="ft-h rev">Foliehuset<br/><span class="accent">Trondheim.</span></h2>
+    <div class="ft-top">
+      <div>
+        <a href="index.html" class="ft-logo" aria-label="Foliehuset Trondheim"></a>
+        <p class="ft-tag" data-no="Kvalitetsbevisst foliering — helfoliering, bildekor, chromedelete, solfilm og PPF. Verksted siden 2016 i Trondheim." data-en="Quality-conscious vinyl wrapping — full wraps, vehicle decor, chrome delete, window tint and PPF. Workshop in Trondheim since 2016.">Kvalitetsbevisst foliering — helfoliering, bildekor, chromedelete, solfilm og PPF. Verksted siden 2016 i Trondheim.</p>
+      </div>
+      <div class="ft-col"><h5 data-no="Tjenester" data-en="Services">Tjenester</h5><ul>
+        <li><a href="tjenester.html" data-no="Helfoliering" data-en="Full wrap">Helfoliering</a></li>
+        <li><a href="tjenester.html" data-no="Bildekor" data-en="Vehicle decor">Bildekor</a></li>
+        <li><a href="tjenester.html" data-no="Chromedelete" data-en="Chrome delete">Chromedelete</a></li>
+        <li><a href="tjenester.html" data-no="Solfilm" data-en="Window tint">Solfilm</a></li>
+        <li><a href="tjenester.html">PPF</a></li>
+      </ul></div>
+      <div class="ft-col"><h5 data-no="Selskap" data-en="Company">Selskap</h5><ul>
+        <li><a href="om-oss.html" data-no="Om oss" data-en="About">Om oss</a></li>
+        <li><a href="priser.html" data-no="Priser" data-en="Pricing">Priser</a></li>
+        <li><a href="https://www.instagram.com/autoshine.bilpleie.foliering/" target="_blank" rel="noopener">Instagram ↗</a></li>
+        <li><a href="https://www.facebook.com/Bilpleie.Orkanger/" target="_blank" rel="noopener">Facebook ↗</a></li>
+      </ul></div>
+      <div class="ft-col"><h5 data-no="Kontakt" data-en="Contact">Kontakt</h5><ul>
+        <li><a href="tel:+4794874836">948 74 836</a></li>
+        <li><a href="mailto:post@autoshinebilpleie.no">post@autoshinebilpleie.no</a></li>
+        <li>Magnus Lagabøters veg 8</li>
+        <li>7047 Trondheim</li>
+      </ul></div>
+    </div>
+    <div class="ft-cert" aria-label="Offentlig godkjent av Arbeidstilsynet">
+      <div class="ft-cert-side">
+        <div class="ft-cert-lbl" data-no="Sertifisert virksomhet" data-en="Certified business">Sertifisert virksomhet</div>
+        <div class="ft-cert-desc" data-no="Foliehuset Trondheim er offentlig godkjent av Arbeidstilsynet." data-en="Foliehuset Trondheim is officially approved by the Norwegian Labour Inspection Authority (Arbeidstilsynet).">Foliehuset Trondheim er offentlig godkjent av Arbeidstilsynet.</div>
+      </div>
+      <img src="arbeidstilsynet.png" alt="Offentlig godkjent av Arbeidstilsynet" class="ft-cert-img" loading="lazy"/>
+    </div>
+    <div class="ft-bot">
+      <span class="ft-copy">© FOLIEHUSET TRONDHEIM 2026</span>
+      <span class="ft-copy" data-no="TIDL. AUTO-SHINE TRONDHEIM" data-en="FORMERLY AUTO-SHINE TRONDHEIM">TIDL. AUTO-SHINE TRONDHEIM</span>
+    </div>
+    <div class="yams-c">
+      <a href="https://hanaamedyan.github.io/yamsas/" target="_blank" rel="noopener" aria-label="YAMS — Website Solutions"
+         style="display:inline-flex;align-items:center;gap:8px;background:#0B0B0B;border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:8px 16px;text-decoration:none;transition:border-color .25s,transform .25s,box-shadow .25s;"
+         onmouseover="this.style.borderColor='rgba(200,166,96,.4)';this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 22px -10px rgba(200,166,96,.35)'"
+         onmouseout="this.style.borderColor='rgba(255,255,255,.06)';this.style.transform='';this.style.boxShadow=''">
+        <svg width="13" height="18" viewBox="0 0 34 46" fill="none"><line x1="2" y1="2" x2="17" y2="19" stroke="#FFF" stroke-width="4.5" stroke-linecap="round"/><line x1="32" y1="2" x2="17" y2="19" stroke="#FFF" stroke-width="4.5" stroke-linecap="round"/><line x1="17" y1="19" x2="17" y2="44" stroke="#FFF" stroke-width="4.5" stroke-linecap="round"/><circle cx="17" cy="19" r="4.5" fill="#C8A660"/></svg>
+        <span style="font-family:'Outfit',sans-serif;font-size:12px;font-weight:700;color:#FFF;letter-spacing:.05em;">YAMS</span>
+        <span style="width:1px;height:13px;background:rgba(255,255,255,.12);"></span>
+        <span style="font-family:'Outfit',sans-serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.28);">Website Solutions</span>
+      </a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

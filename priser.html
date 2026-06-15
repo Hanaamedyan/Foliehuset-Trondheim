@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Priser — Foliehuset Trondheim</title>
+<meta name="description" content="Komplett prisliste for bilpleie og foliering. Alle priser inkl. MVA."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230A0A0A'/%3E%3Ctext x='16' y='20' text-anchor='middle' font-family='Arial' font-size='13' font-weight='300' fill='%23F0EEE6' letter-spacing='1'%3EFH%3C/text%3E%3C/svg%3E"/>
+<meta name="theme-color" content="#0A0A0A"/>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.0.42/dist/lenis.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js" defer></script>
+<script src="script.js" defer></script>
+</head>
+<body>
+<div class="cur" id="cur"></div>
+<div class="cur-r" id="cur-r"></div>
+
+<nav id="nav">
+  <a href="index.html" class="nav-brand" aria-label="Foliehuset Trondheim"></a>
+  <ul class="nav-links">
+    <li><a href="tjenester.html" data-no="Tjenester" data-en="Services">Tjenester</a></li>
+    <li><a href="priser.html" class="active" data-no="Priser" data-en="Pricing">Priser</a></li>
+    <li><a href="om-oss.html" data-no="Om oss" data-en="About">Om oss</a></li>
+    <li><a href="kontakt.html" data-no="Kontakt" data-en="Contact">Kontakt</a></li>
+  </ul>
+  <a href="tel:+4794874836" class="nav-cta">948 74 836
+    <span class="nav-cta-i"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></span>
+  </a>
+  <button class="burger" id="burger"><span></span><span></span><span></span></button>
+</nav>
+<div class="mob" id="mob">
+  <a href="index.html" data-no="Hjem" data-en="Home">Hjem</a>
+  <a href="tjenester.html" data-no="Tjenester" data-en="Services">Tjenester</a>
+  <a href="priser.html" class="active" data-no="Priser" data-en="Pricing">Priser</a>
+  <a href="om-oss.html" data-no="Om oss" data-en="About">Om oss</a>
+  <a href="kontakt.html" data-no="Kontakt" data-en="Contact">Kontakt</a>
+  <a href="tel:+4794874836" style="color:var(--acc-3);">948 74 836</a>
+</div>
+
+<!-- HERO small -->
+<section class="hero hero-sm">
+  <div class="hero-img gallery"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="hero-tag rev"><div class="hero-tag-dot"></div><span data-no="Priser · Inkl. MVA" data-en="Pricing · VAT included">Priser · Inkl. MVA</span></div>
+    <h1 class="hero-h rev d1" data-no="Ærlige priser,<br/><span class=&quot;serif&quot;>åpen tabell.</span>" data-en="Honest prices,<br/><span class=&quot;serif&quot;>open table.</span>">Ærlige priser,<br/><span class="serif">åpen tabell.</span></h1>
+    <div class="pris-bar rev d2">
+      <div class="pris-pill" data-no="Inkl. MVA" data-en="VAT included">Inkl. MVA</div>
+      <div class="pris-pill" data-no="Vanlig Bil / STV · SUV / Varebil" data-en="Regular car / Estate · SUV / Van">Vanlig Bil / STV · SUV / Varebil</div>
+    </div>
+  </div>
+</section>
+
+<!-- PRISER -->
+<section class="sek">
+  <div class="sek-inner">
+    <div class="pris-grid">
+      <div class="pris-card wide rev"><div class="pris-in">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap;">
+          <div>
+            <div class="pris-name" data-no="Helfoliering &amp; PPF" data-en="Full wrap &amp; PPF">Helfoliering &amp; PPF</div>
+            <div class="pris-meta" data-no="Foliehuset Trondheim · Etter avtale" data-en="Foliehuset Trondheim · By arrangement">Foliehuset Trondheim · Etter avtale</div>
+            <div class="pris-desc" style="max-width:560px;" data-no="Helfolierings­oppdrag prises individuelt — sluttprisen avhenger av valgt farge/finish, foliemerke (3M, Avery Dennison) og kjøretøyets størrelse. Ring oss for et kostnadsfritt tilbud tilpasset din bil." data-en="Full wrap jobs are priced individually — the final price depends on the chosen colour/finish, film brand (3M, Avery Dennison) and vehicle size. Call us for a free quote tailored to your car.">Helfolierings­oppdrag prises individuelt — sluttprisen avhenger av valgt farge/finish, foliemerke (3M, Avery Dennison) og kjøretøyets størrelse. Ring oss for et kostnadsfritt tilbud tilpasset din bil.</div>
+          </div>
+          <a href="kontakt.html" class="btn-glass" style="margin-top:6px;"><span data-no="Be om tilbud" data-en="Request quote">Be om tilbud</span><span class="btn-glass-i"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></span></a>
+        </div>
+      </div></div>
+
+      <div class="pris-card rev"><div class="pris-in">
+        <div class="pris-name" data-no="Grundig innvendig vask" data-en="Thorough interior wash">Grundig innvendig vask</div>
+        <div class="pris-meta" data-no="Ca. 2,5 timer" data-en="Approx. 2.5 hours">Ca. 2,5 timer</div>
+        <div class="pris-desc" data-no="Håndvask og støvsuging, flekkfjerning og hundehår. 7-seter +400,-" data-en="Hand wash and vacuuming, stain removal and pet hair. 7-seater +400,-">Håndvask og støvsuging, flekkfjerning og hundehår. 7-seter +400,-</div>
+        <div class="pris-tab">
+          <div class="pris-col"><div class="pris-col-l" data-no="Vanlig / STV" data-en="Regular / Estate">Vanlig / STV</div><div class="pris-col-v">1 590,-</div></div>
+          <div class="pris-col"><div class="pris-col-l" data-no="SUV / Varebil" data-en="SUV / Van">SUV / Varebil</div><div class="pris-col-v">1 890,-</div></div>
+        </div>
+      </div></div>
+
+      <div class="pris-card rev d1"><div class="pris-in">
+        <div class="pris-name" data-no="Grundig utvendig vask" data-en="Thorough exterior wash">Grundig utvendig vask</div>
+        <div class="pris-meta" data-no="Ca. 3 timer · Anbefales" data-en="Approx. 3 hours · Recommended">Ca. 3 timer · Anbefales</div>
+        <div class="pris-desc" data-no="Lakkrens og felgrens. Tillegg utvendig plast/gummi: 500,-" data-en="Paint cleansing and wheel cleaning. Add-on for exterior plastic/rubber: 500,-">Lakkrens og felgrens. Tillegg utvendig plast/gummi: 500,-</div>
+        <div class="pris-tab">
+          <div class="pris-col"><div class="pris-col-l" data-no="Vanlig / STV" data-en="Regular / Estate">Vanlig / STV</div><div class="pris-col-v">1 490,-</div></div>
+          <div class="pris-col"><div class="pris-col-l" data-no="SUV / Varebil" data-en="SUV / Van">SUV / Varebil</div><div class="pris-col-v">1 790,-</div></div>
+        </div>
+      </div></div>
+
+      <div class="pris-card rev"><div class="pris-in">
+        <div class="pris-name" data-no="Inn- og utvendig pakkepris" data-en="Inside &amp; outside package">Inn- og utvendig pakkepris</div>
+        <div class="pris-meta" data-no="Ca. 5 timer · Anbefales" data-en="Approx. 5 hours · Recommended">Ca. 5 timer · Anbefales</div>
+        <div class="pris-desc" data-no="Grundig utvendig og innvendig vask, lakkrens, felgrens og motorvask." data-en="Thorough exterior and interior wash, paint cleansing, wheel cleaning and engine wash.">Grundig utvendig og innvendig vask, lakkrens, felgrens og motorvask.</div>
+        <div class="pris-tab">
+          <div class="pris-col"><div class="pris-col-l" data-no="Vanlig / STV" data-en="Regular / Estate">Vanlig / STV</div><div class="pris-col-v">1 790,-</div></div>
+          <div class="pris-col"><div class="pris-col-l" data-no="SUV / Varebil" data-en="SUV / Van">SUV / Varebil</div><div class="pris-col-v">2 090,-</div></div>
+        </div>
+      </div></div>
+
+      <div class="pris-card rev d1"><div class="pris-in">
+        <div class="pris-name" data-no="Dyp innvendig rens" data-en="Deep interior cleaning">Dyp innvendig rens</div>
+        <div class="pris-meta" data-no="Tekstil &amp; skinnseter" data-en="Fabric &amp; leather seats">Tekstil &amp; skinnseter</div>
+        <div class="pris-desc" data-no="Full dyprens av interiør — bilen blir som ny innvendig." data-en="Full deep cleaning of the interior — the car becomes like new inside.">Full dyprens av interiør — bilen blir som ny innvendig.</div>
+        <div class="pris-tab">
+          <div class="pris-col"><div class="pris-col-l" data-no="Vanlig / STV" data-en="Regular / Estate">Vanlig / STV</div><div class="pris-col-v">3 490,-</div></div>
+          <div class="pris-col"><div class="pris-col-l" data-no="SUV / Varebil" data-en="SUV / Van">SUV / Varebil</div><div class="pris-col-v">3 790,-</div></div>
+        </div>
+      </div></div>
+
+      <div class="pris-card rev"><div class="pris-in">
+        <div class="pris-name" data-no="Lett-Shine polering" data-en="Light-Shine polishing">Lett-Shine polering</div>
+        <div class="pris-meta" data-no="Utvendig vask + 1-stegs polering" data-en="Exterior wash + single-step polishing">Utvendig vask + 1-stegs polering</div>
+        <div class="pris-desc" data-no="Utvendig vask m/Lakkrens og lett maskinpolering. Plast/gummi +500,-" data-en="Exterior wash with paint cleansing and light machine polishing. Plastic/rubber +500,-">Utvendig vask m/Lakkrens og lett maskinpolering. Plast/gummi +500,-</div>
+        <div class="pris-tab">
+          <div class="pris-col"><div class="pris-col-l" data-no="Vanlig / STV" data-en="Regular / Estate">Vanlig / STV</div><div class="pris-col-v">3 990,-</div></div>
+          <div class="pris-col"><div class="pris-col-l" data-no="SUV / Varebil" data-en="SUV / Van">SUV / Varebil</div><div class="pris-col-v">4 490,-</div></div>
+        </div>
+      </div></div>
+
+      <div class="pris-card rev d1"><div class="pris-in">
+        <div class="pris-name" data-no="Rubbing og polering av lakk" data-en="Compound &amp; polishing">Rubbing og polering av lakk</div>
+        <div class="pris-meta" data-no="2-stegs polering til høyglans" data-en="Two-step polish to high gloss">2-stegs polering til høyglans</div>
+        <div class="pris-desc" data-no="Komplett poleringsbehandling — bilen poleres opp til høyglans." data-en="Complete polishing treatment — the car is polished to high gloss.">Komplett poleringsbehandling — bilen poleres opp til høyglans.</div>
+        <div class="pris-tab">
+          <div class="pris-col"><div class="pris-col-l" data-no="Vanlig / STV" data-en="Regular / Estate">Vanlig / STV</div><div class="pris-col-v">5 290,-</div></div>
+          <div class="pris-col"><div class="pris-col-l" data-no="SUV / Varebil" data-en="SUV / Van">SUV / Varebil</div><div class="pris-col-v">6 290,-</div></div>
+        </div>
+      </div></div>
+
+      <div class="pris-card rev"><div class="pris-in">
+        <div class="pris-name" data-no="Spa-vask · klargjøring for salg" data-en="Spa wash · prep for sale">Spa-vask · klargjøring for salg</div>
+        <div class="pris-meta" data-no="Komplett behandling" data-en="Complete treatment">Komplett behandling</div>
+        <div class="pris-desc" data-no="Lakkrens, felgrens, motorvask, lett maskinpolering og full dyprens. Bilen blir som ny — ute og inne." data-en="Paint cleansing, wheel cleaning, engine wash, light machine polishing and full deep cleaning. The car becomes like new — inside and out.">Lakkrens, felgrens, motorvask, lett maskinpolering og full dyprens. Bilen blir som ny — ute og inne.</div>
+        <div class="pris-tab">
+          <div class="pris-col"><div class="pris-col-l" data-no="Vanlig / STV" data-en="Regular / Estate">Vanlig / STV</div><div class="pris-col-v">5 290,-</div></div>
+          <div class="pris-col"><div class="pris-col-l" data-no="SUV / Varebil" data-en="SUV / Van">SUV / Varebil</div><div class="pris-col-v">6 290,-</div></div>
+        </div>
+      </div></div>
+
+      <div class="pris-card wide rev d1"><div class="pris-in">
+        <div class="pris-name" data-no="CARTEC keramisk coating" data-en="CARTEC ceramic coating">CARTEC keramisk coating</div>
+        <div class="pris-meta" data-no="Ceramic Carbon Coating · Holdbarhet 3 år" data-en="Ceramic Carbon Coating · 3 year durability">Ceramic Carbon Coating · Holdbarhet 3 år</div>
+        <div class="pris-desc" data-no="Premium keramisk beskyttelse fra CARTEC. Krever rebehandling hver 12. måned (1 990,-)." data-en="Premium ceramic protection from CARTEC. Requires re-treatment every 12 months (1 990,-).">Premium keramisk beskyttelse fra CARTEC. Krever rebehandling hver 12. måned (1 990,-).</div>
+        <div class="pris-tab">
+          <div class="pris-col"><div class="pris-col-l" data-no="Ny bil — fra" data-en="New car — from">Ny bil — fra</div><div class="pris-col-v">8 890,-</div></div>
+          <div class="pris-col"><div class="pris-col-l" data-no="Bruktbil — fra" data-en="Used car — from">Bruktbil — fra</div><div class="pris-col-v">9 390,-</div></div>
+          <div class="pris-col"><div class="pris-col-l" data-no="Rebehandling / 12 mnd" data-en="Re-treatment / 12 months">Rebehandling / 12 mnd</div><div class="pris-col-v">1 990,-</div></div>
+        </div>
+      </div></div>
+
+      <div class="pris-card rev"><div class="pris-in">
+        <div class="pris-name" data-no="Sliping &amp; polering av lykter" data-en="Headlight restoration">Sliping &amp; polering av lykter</div>
+        <div class="pris-meta" data-no="Pris per lykt" data-en="Price per headlight">Pris per lykt</div>
+        <div class="pris-desc" data-no="Klare, blanke lykter — bedre sikt og finish." data-en="Clear, gleaming headlights — better visibility and finish.">Klare, blanke lykter — bedre sikt og finish.</div>
+        <div class="pris-tab">
+          <div class="pris-col"><div class="pris-col-l" data-no="Per stk" data-en="Each">Per stk</div><div class="pris-col-v">500,-</div></div>
+          <div class="pris-col"><div class="pris-col-l" data-no="Begge sider" data-en="Both sides">Begge sider</div><div class="pris-col-v">890,-</div></div>
+        </div>
+      </div></div>
+
+      <div class="pris-card rev d1"><div class="pris-in">
+        <div class="pris-name" data-no="Rens av seter" data-en="Seat cleaning">Rens av seter</div>
+        <div class="pris-meta" data-no="Dyprens · tekstil eller skinn" data-en="Deep clean · fabric or leather">Dyprens · tekstil eller skinn</div>
+        <div class="pris-desc" data-no="Fjerning av alle forurensninger og flekker. Per sete: 590,-" data-en="Removal of all contaminants and stains. Per seat: 590,-">Fjerning av alle forurensninger og flekker. Per sete: 590,-</div>
+        <div class="pris-tab">
+          <div class="pris-col"><div class="pris-col-l" data-no="5 seter" data-en="5 seats">5 seter</div><div class="pris-col-v">2 390,-</div></div>
+          <div class="pris-col"><div class="pris-col-l" data-no="7 seter" data-en="7 seats">7 seter</div><div class="pris-col-v">2 990,-</div></div>
+        </div>
+      </div></div>
+
+      <div class="pris-card rev"><div class="pris-in">
+        <div class="pris-name" data-no="Fjerning av lukt" data-en="Odour removal">Fjerning av lukt</div>
+        <div class="pris-meta" data-no="Umiddelbar &amp; langtidsvirkende" data-en="Immediate &amp; long-lasting">Umiddelbar &amp; langtidsvirkende</div>
+        <div class="pris-desc" data-no="Profesjonell luktbehandling med øyeblikkelig effekt." data-en="Professional odour treatment with immediate effect.">Profesjonell luktbehandling med øyeblikkelig effekt.</div>
+        <div class="pris-tab">
+          <div class="pris-col"><div class="pris-col-l" data-no="Vanlig / STV" data-en="Regular / Estate">Vanlig / STV</div><div class="pris-col-v">1 290,-</div></div>
+          <div class="pris-col"><div class="pris-col-l" data-no="SUV / Varebil" data-en="SUV / Van">SUV / Varebil</div><div class="pris-col-v">1 490,-</div></div>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="pris-foot-notes rev">
+      <div class="pris-foot-note" data-no="Alle priser er inklusive MVA. Tillegg for 7-seter kjøretøy: 400,-" data-en="All prices include VAT. Add-on for 7-seater vehicles: 400,-">Alle priser er inklusive MVA. Tillegg for 7-seter kjøretøy: 400,-</div>
+      <div class="pris-foot-note" data-no="Helfolieringsoppdrag prises individuelt — sluttprisen avhenger av valgt farge, foliemerke og bilstørrelse." data-en="Full wrap jobs are priced individually — the final price depends on the chosen colour, film brand and vehicle size.">Helfolieringsoppdrag prises individuelt — sluttprisen avhenger av valgt farge, foliemerke og bilstørrelse.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta">
+  <div class="cta-orb cta-o1"></div>
+  <div class="cta-orb cta-o2"></div>
+  <h2 class="cta-h rev" data-no="Trenger du et<br/><span class=&quot;accent&quot;>tilpasset</span> tilbud?" data-en="Need a<br/><span class=&quot;accent&quot;>tailored</span> quote?">Trenger du et<br/><span class="accent">tilpasset</span> tilbud?</h2>
+  <p class="cta-sub rev d1" data-no="Helfoliering og spesialoppdrag prises individuelt. Ring oss, så finner vi den beste løsningen for din bil." data-en="Full wraps and special jobs are priced individually. Call us and we'll find the best solution for your car.">Helfoliering og spesialoppdrag prises individuelt. Ring oss, så finner vi den beste løsningen for din bil.</p>
+  <div class="cta-acts rev d2">
+    <a href="tel:+4794874836" class="btn-glass">
+      <span data-no="Ring 948 74 836" data-en="Call 948 74 836">Ring 948 74 836</span>
+      <span class="btn-glass-i"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></span>
+    </a>
+    <a href="mailto:post@autoshinebilpleie.no" class="btn-ghost">post@autoshinebilpleie.no ↗</a>
+  </div>
+</div>
+
+<footer>
+  <div class="ft">
+    <h2 class="ft-h rev">Foliehuset<br/><span class="accent">Trondheim.</span></h2>
+    <div class="ft-top">
+      <div>
+        <a href="index.html" class="ft-logo" aria-label="Foliehuset Trondheim"></a>
+        <p class="ft-tag" data-no="Kvalitetsbevisst foliering — helfoliering, bildekor, chromedelete, solfilm og PPF. Verksted siden 2016 i Trondheim." data-en="Quality-conscious vinyl wrapping — full wraps, vehicle decor, chrome delete, window tint and PPF. Workshop in Trondheim since 2016.">Kvalitetsbevisst foliering — helfoliering, bildekor, chromedelete, solfilm og PPF. Verksted siden 2016 i Trondheim.</p>
+      </div>
+      <div class="ft-col"><h5 data-no="Tjenester" data-en="Services">Tjenester</h5><ul>
+        <li><a href="tjenester.html" data-no="Helfoliering" data-en="Full wrap">Helfoliering</a></li>
+        <li><a href="tjenester.html" data-no="Bildekor" data-en="Vehicle decor">Bildekor</a></li>
+        <li><a href="tjenester.html" data-no="Chromedelete" data-en="Chrome delete">Chromedelete</a></li>
+        <li><a href="tjenester.html" data-no="Solfilm" data-en="Window tint">Solfilm</a></li>
+        <li><a href="tjenester.html">PPF</a></li>
+      </ul></div>
+      <div class="ft-col"><h5 data-no="Selskap" data-en="Company">Selskap</h5><ul>
+        <li><a href="om-oss.html" data-no="Om oss" data-en="About">Om oss</a></li>
+        <li><a href="priser.html" data-no="Priser" data-en="Pricing">Priser</a></li>
+        <li><a href="https://www.instagram.com/autoshine.bilpleie.foliering/" target="_blank" rel="noopener">Instagram ↗</a></li>
+        <li><a href="https://www.facebook.com/Bilpleie.Orkanger/" target="_blank" rel="noopener">Facebook ↗</a></li>
+      </ul></div>
+      <div class="ft-col"><h5 data-no="Kontakt" data-en="Contact">Kontakt</h5><ul>
+        <li><a href="tel:+4794874836">948 74 836</a></li>
+        <li><a href="mailto:post@autoshinebilpleie.no">post@autoshinebilpleie.no</a></li>
+        <li>Magnus Lagabøters veg 8</li>
+        <li>7047 Trondheim</li>
+      </ul></div>
+    </div>
+    <div class="ft-cert" aria-label="Offentlig godkjent av Arbeidstilsynet">
+      <div class="ft-cert-side">
+        <div class="ft-cert-lbl" data-no="Sertifisert virksomhet" data-en="Certified business">Sertifisert virksomhet</div>
+        <div class="ft-cert-desc" data-no="Foliehuset Trondheim er offentlig godkjent av Arbeidstilsynet." data-en="Foliehuset Trondheim is officially approved by the Norwegian Labour Inspection Authority (Arbeidstilsynet).">Foliehuset Trondheim er offentlig godkjent av Arbeidstilsynet.</div>
+      </div>
+      <img src="arbeidstilsynet.png" alt="Offentlig godkjent av Arbeidstilsynet" class="ft-cert-img" loading="lazy"/>
+    </div>
+    <div class="ft-bot">
+      <span class="ft-copy">© FOLIEHUSET TRONDHEIM 2026</span>
+      <span class="ft-copy" data-no="TIDL. AUTO-SHINE TRONDHEIM" data-en="FORMERLY AUTO-SHINE TRONDHEIM">TIDL. AUTO-SHINE TRONDHEIM</span>
+    </div>
+    <div class="yams-c">
+      <a href="https://hanaamedyan.github.io/yamsas/" target="_blank" rel="noopener" aria-label="YAMS — Website Solutions"
+         style="display:inline-flex;align-items:center;gap:8px;background:#0B0B0B;border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:8px 16px;text-decoration:none;transition:border-color .25s,transform .25s,box-shadow .25s;"
+         onmouseover="this.style.borderColor='rgba(200,166,96,.4)';this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 22px -10px rgba(200,166,96,.35)'"
+         onmouseout="this.style.borderColor='rgba(255,255,255,.06)';this.style.transform='';this.style.boxShadow=''">
+        <svg width="13" height="18" viewBox="0 0 34 46" fill="none"><line x1="2" y1="2" x2="17" y2="19" stroke="#FFF" stroke-width="4.5" stroke-linecap="round"/><line x1="32" y1="2" x2="17" y2="19" stroke="#FFF" stroke-width="4.5" stroke-linecap="round"/><line x1="17" y1="19" x2="17" y2="44" stroke="#FFF" stroke-width="4.5" stroke-linecap="round"/><circle cx="17" cy="19" r="4.5" fill="#C8A660"/></svg>
+        <span style="font-family:'Outfit',sans-serif;font-size:12px;font-weight:700;color:#FFF;letter-spacing:.05em;">YAMS</span>
+        <span style="width:1px;height:13px;background:rgba(255,255,255,.12);"></span>
+        <span style="font-family:'Outfit',sans-serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.28);">Website Solutions</span>
+      </a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
